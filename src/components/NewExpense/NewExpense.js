@@ -4,7 +4,9 @@ import './NewExpense.css'
 const NewExpense = (props)=>{
 
     const saveExpenseHandler = expensedata =>{
-        props.onAddExpense(expensedata);
+        const _id = Math.round(Math.random()*100).toString(16);
+        const newExpense = {...expensedata, id:_id}
+        props.onAddExpense(newExpense);
     }; 
 
     return (
