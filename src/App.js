@@ -31,11 +31,12 @@ function App() {
   const addExpenseHandler = newExpense =>{
     setExpenses((prevExpenses)=> {return [newExpense,...prevExpenses]} );
   };
+   
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-      <Expenses Data = {expenses}></Expenses>
+      <NewExpense onAddExpense={addExpenseHandler} ></NewExpense>
+      <Expenses date = {expenses}></Expenses>
     </div>
   );
 }
